@@ -2,6 +2,8 @@ package fi.jasoft.tokka;
 
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
+
+import com.vaadin.addon.touchkit.server.TouchKitServlet;
 import com.vaadin.server.VaadinServlet;
 
 @WebServlet(
@@ -10,4 +12,4 @@ import com.vaadin.server.VaadinServlet;
         @WebInitParam(name="ui", value="fi.jasoft.tokka.TokkaUI"),
 		@WebInitParam(name="widgetset", value="fi.jasoft.tokka.TokkaWidgetset")
     })
-public class TokkaServlet extends VaadinServlet { }
+public class TokkaServlet extends TouchKitServlet { }

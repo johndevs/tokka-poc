@@ -1,10 +1,14 @@
 package fi.jasoft.tokka.model;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class TokkaList {
 
 	private String name;
 	
-	private java.util.List<TokkaItem> items;
+	private List<TokkaItem> items = new ArrayList<>();
 
 	public String getName() {
 		return name;
@@ -24,5 +28,17 @@ public class TokkaList {
 			count += item.isDone() ? 1 : 0;
 		}
 		return count;
+	}
+	
+	public void addItem(TokkaItem item) {
+		items.add(item);
+	}
+	
+	public void removeItem(TokkaItem item) {
+		items.remove(item);
+	}
+	
+	public List<TokkaItem> getItems() {
+		return Collections.unmodifiableList(items);
 	}
 }

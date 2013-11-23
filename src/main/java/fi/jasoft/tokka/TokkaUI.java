@@ -14,13 +14,14 @@ import fi.jasoft.tokka.model.TokkaList;
 import fi.jasoft.tokka.views.EditView;
 import fi.jasoft.tokka.views.MainView;
 
-@Theme("mobiletheme")
+@Theme("touchkit")
 public class TokkaUI extends UI{
 	
 	private List<TokkaList> lists = new ArrayList<>(); 
 	
 	@Override
 	protected void init(VaadinRequest request){
+		setSizeFull();
 		
 		/*
 		 * https://vaadin.com/book/-/page/mobile.html says setContent(new MainView()) but it 
